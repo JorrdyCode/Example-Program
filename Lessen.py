@@ -47,7 +47,6 @@ class Login:
         record = cursor.fetchone() # Selects the specific SQLite Database row which was found in the previous .execute command
         check_pw = record[0]
         if password == check_pw: # If password matches that of the one from the database (record) -> Proceed to Logged In screen
-            #messagebox.showinfo("Login successful!", "Login successful!")
             self.newWindow = tk.Toplevel(self.master)
             self.app = LoggedIn(self.newWindow)
         else:
